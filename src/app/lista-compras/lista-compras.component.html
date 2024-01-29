@@ -1,0 +1,24 @@
+<div>
+    <h2>Lista de Compras</h2>
+    <ul>
+      <li *ngFor="let produto of produtos">
+        {{ produto.nome }} - R$ {{ produto.precoUnitario | number:'1.2-2' }} - Quantidade: {{ produto.quantidade }}
+      </li>
+    </ul>
+    <div>
+      <label for="produtoNome">Nome do Produto:</label>
+      <input id="produtoNome" [(ngModel)]="novoProdutoNome" placeholder="Digite o nome do produto">
+  
+      <label for="produtoPreco">Preço Unitário:</label>
+      <input id="produtoPreco" [(ngModel)]="novoProdutoPrecoUnitario" placeholder="Digite o preço unitário" type="number">
+  
+      <label for="produtoQuantidade">Quantidade:</label>
+      <input id="produtoQuantidade" [(ngModel)]="novoProdutoQuantidade" placeholder="Digite a quantidade" type="number">
+  
+      <button (click)="adicionarProduto()">Adicionar Produto</button>
+    </div>
+    <div>
+      <p>Total: R$ {{ calcularTotal() | number:'1.2-2' }}</p>
+    </div>
+  </div>
+  
