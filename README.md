@@ -1,6 +1,7 @@
 # ListaCompras
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.8.
+Criei apenas para ter uma lista em real time para compartilhar com minha esposa. assim cada um podia adicionar itens e isso ser atualizado em cada respectivo browser
 
 ## Development server
 
